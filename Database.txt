@@ -1,0 +1,130 @@
+Database--
+
+Database is an area where we store the data.
+Data-- Means any informative information called as data.
+Data always store in any format i.e database model
+1)HDBMS---- HIERARCHICAL-- ONLY ONE PARENT
+2)NDBMS---- NETWORK-------MORE THAN ONE PARENT
+3)RDBMS---- RELATIONAL---- IN THE FORM OF TABLE--- EXP---MY SQL,ORACLE,MS ACCES ,SQL SERVER
+4)OODBMS--- OBJECT ORIENTED-IN THE FORM OF OBJECT
+
+Terminology--
+
+Table--Entity set,relation
+Column-- Attribute,field
+Row-- Touple,record
+
+ER DIAGRAM-- ENTITY RELATIONSHIP DIAGRAM--
+
+Relationship---One to one,One to many, Many to one  and Many to many
+
+For working into database we used Sql(Structured query language) language.
+
+How many types of query--
+DDL---DATA DEFINITION LANGUAGE(CREATE,ALTER,DROP)
+DML---DATA MANIPULATION LANGUAGE(INSERT ,UPDATE)
+DRL---DATA RETRIEVAL LANGUAGE(SELECT)
+DCL---DATA CONTROL LANGUAGE(GRANT * REVOKE)
+TCL---TRANSACTION CONTROL LANGUAGE(COMMIT & ROLLBACK)
+
+STEP1--CREATE DABASE-- CREATE DATABASE DATABASE NAME;
+STEP2--USE DATABASE -- USE DATABASE
+STEP3--CREATE TABLE--  CREATE TABLE TABLENAME(COLNAME1 DATATYPE(SIZE),COLNAME2 DATATYPE(SIZE),COLNAME3 DATATYPE(SIZE)...)
+STEP4--INSERT THE RECORD-- INSERT INTO TABLENAME VALUES(VALUE1,VALUE2,VALUE3...);
+NOTE-- TEXT ALWAYS WRITTEN IN SINGLE QUOTES.
+STEP5--RETRIEVE THE RECORD-- SELECT * FROM TABLENAME;
+
+
+Q1--RETRIEVE ALL RECORD FROM STUDENT TABLE--- 
+     SELECT * FROM STUDENT;
+Q2--RETRIVE ONLY NAME AND ROLLNO FROM STUDENT TABLE--
+     SELECT NAME,ROLLNO FROM STUDENT;
+Q3--RETRIEVE ALL RECORD FROM STUDENT TABLE IN ASCENDING ORDER IN NAME--
+     SELECT * FROM STUDENT ORDER BY NAME DESC/ASC(BY DEFAULT)
+Q4--RETRIVE ALL RECORD FROM STUDENT TABLE WHERE MARKS >50&
+     SELECT * FROM STUDENT WHERE MARKS>50;
+Q5--RETRIVE ALL RECORD WHOSE NAME BEGINS WITH A--- PATTERN MATCHINE-- LIKE _(SINGLE CHARACTER)  %(ANY NO OF CHARACTER)
+     SELECT * FROM STUDENT WHERE NAME LIKE '__A%';
+Q6-- RETRIEVE ALL RECORD WHERE NAME BEGINS WITH A AND MARKS >50--
+     SELECT * FROM STUDENT WHERE NAME LIKE 'A%' AND MARKS>50;
+Q7-- RETRIVE AVERAGE PERCENTAGE OF  ALL STUDENT.
+       select avg(marks) from student;
+Q8-- HOW MANY RRECORD HAVING AGE >35;
+	SELECT COUNT(NAME) FROM STUDENT WHERE AGE>35
+       SELECT AGE,COUNT(AGE) FROM STUDENT GROUP BY AGE having age=35.
+       SELECT DEPARTMENT,COUNT(DEPARTMENRT) FROM EMP GROUP BY DEPARTMENT;
+
+SQL-- SUPPORTS OPERATORS AND PROVIDES FUNCTION ALSO.
+ 
+AIRTHMETIC OP--+,-,*,/
+COMPARISON OP-->,<,>=,<=,<>(NOT EQUAL TO)
+LOGICAL OP--AND ,OR,NOT
+PATTERN MATCHING-- %,_
+Other operator-- in ,not in,between
+
+Aggregate function-- sum,max,min,avg,count
+Date & time function--
+String function----
+math function-------
+
+Keys---
+Primary key---A field by which we uniquikly identify the data.(for exp-- rollno,empid,). Only one field can define as a primary key.
+Unique key----Having only unique data .But we can declare MORE THAN ONE COLUMN AS A UNIQUE KEY.
+FOREIGN KEY--- USE AS A BRIDGE BETWEEN TWO TABLE.BOTH TABLE HAVING A COMMON COLUMN.
+
+Group by--- For creating any group behalf of any column we used group by.
+ for exp-- SELECT DEPARTMENT,COUNT(DEPARTMENRT) FROM EMP GROUP BY DEPARTMENT;
+Group by always used agreegate function;
+if we use condition after group by then used having
+
+Subquery/Nested query()-- Query within the query-
+First execute inner query after that outer query
+outer query(inner query)
+nested query are of two types--single row subquery --(=)
+                               multi row subquery--(in /not in)
+select * from clientmaster where clientno in(select clientno from salesorderdetails)
+
+Joins--- For retrieving the data from more than one table--
+
+1)self join----a table can connected with itself
+2)inner join---
+3)cross join-- total no of rows multiplhy from both table.
+4)outer join---
+   a)left outer join--
+   b)right outer join--
+   c)full outer join--
+
+syntax--
+   select colname.. from firsttablename left/right/full/ on secondtablename
+
+  
+Github----1) Open source plaform-
+          2) Connect with any project and any community
+          3) Store your data .
+          
+git bash/--- offline at your system
+github------ online
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+     
+     
+   
+
+
+
+
+
+
+
